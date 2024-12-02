@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="perpul">
+    <ion-buttons slot="start">
+        <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+      <ion-title color="light">
+</ion-title>
+</ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-label class="text-center">
+      <h1><b>กรอกข้อมูลสินค้าที่ต้องการ</b></h1>
+  </ion-label>
+  <ion-list>
+    <ion-item>
+        <ion-label>ประเภทสินค้า</ion-label>
+        <ion-select aria-label="Fruit" interface="popover" slot="end" placeholder="เพิ่มเติม" [(ngModel)]="txtmenu">
+            <ion-select-option value="โสด">น้ำส้ม</ion-select-option>
+            <ion-select-option value="สมรส">น้ำเสาวรส</ion-select-option>
+            <ion-select-option value="หย่าร้าง">น้ำฝรั่ง</ion-select-option>
+            <ion-select-option value="หย่าร้าง">น้ำกระชาย</ion-select-option>
+        </ion-select>
+    </ion-item>
+</ion-list>
+
+
+  <ion-item>
+      <ion-label position="floating">ประเภทขวด</ion-label>
+      <ion-input type="text" [(ngModel)]="txtid"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label position="floating">ราคา</ion-label>
+      <ion-input type="text" [(ngModel)]="txtprice"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">ระดับความหวาน</ion-label>
+    <ion-input type="text" [(ngModel)]="txtdetail"></ion-input>
+</ion-item>
+
+
+  <div class="text-center mt-4">
+      <ion-button (click)="addmember()">บันทึกข้อมูล</ion-button>
+      <ion-button color="warning" (click)="show()">แสดงข้อมูล</ion-button>
+  </div>
+</ion-content>
